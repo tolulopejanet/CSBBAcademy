@@ -42,11 +42,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         <Link to="/" className="flex items-center gap-3">
-          <div className="bg-white rounded-4xl">
+          <div className="bg-white p-1 rounded-lg">
             <img
               src={logo}
               alt="CourtSide logo"
-              className="h-70 w-auto md:h-20"
+              className="h-12 w-auto md:h-16"
             />
           </div>
           <span className="hidden text-lg font-bold tracking-tight sm:inline md:text-xl">
@@ -86,7 +86,7 @@ export default function Navbar() {
 
         {/* Mobile */}
         <button
-          className="md:hidden text-2xl"
+          className="md:hidden text-2xl cursor-pointer"
           onClick={() => setOpen(!open)}
         >
           ☰
