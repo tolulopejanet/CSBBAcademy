@@ -2,6 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FaArrowLeft, FaCalendar, FaUser, FaTimes } from "react-icons/fa";
+import skill2 from "../assets/skill2.jpg";
+import defenseImage from "../assets/defense.avif";
+import healthImage from "../assets/health.avif";
+import mentalImage from "../assets/mental.jpg";
+import pitch from "../assets/pitch.jpeg";
+import teamImage from "../assets/team.avif";
 
 export default function BlogPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -15,9 +21,8 @@ export default function BlogPage() {
       category: "Skills",
       excerpt:
         "Ball handling is the foundation of basketball. Learn how to develop elite-level dribbling skills that will set you apart on the court.",
-      image:
-        "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80",
-      content: `In today's fast-paced basketball game, ball handling has become more critical than ever...
+      image: skill2,
+      content: `In today's fast-paced basketball game, ball handling has become more critical than ever.
 
 The key to developing exceptional ball-handling skills is consistent daily practice...
 
@@ -31,11 +36,12 @@ Remember that ball handling isn't just about fancy moves—it's about control, c
       category: "Defense",
       excerpt:
         "Great defense wins championships. Discover the fundamental principles that transform good defenders into exceptional ones.",
-      image:
-        "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80",
-      content: `Defense is the most neglected aspect of basketball training...
+      image: defenseImage,
+      content: `Defense is the most neglected aspect of basketball training. Yet, it's what separates good players from great players and championship teams from the rest.
 
-The foundation of good defense starts with footwork and positioning...
+Start with the defensive stance: low, balanced, and ready to move in any direction.
+
+The foundation of good defense starts with footwork and positioning.
 
 Individual defense is important, but team defense is what wins games.`,
     },
@@ -47,8 +53,7 @@ Individual defense is important, but team defense is what wins games.`,
       category: "Health",
       excerpt:
         "What you do off the court matters as much as your on-court work.",
-      image:
-        "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80",
+      image: healthImage,
       content: `Basketball is a demanding sport that requires optimal nutrition...
 
 Focus on a balanced diet rich in lean proteins...
@@ -63,8 +68,7 @@ Sleep is when your body repairs and grows stronger.`,
       category: "Mental",
       excerpt:
         "Basketball is as much a mental game as it is physical.",
-      image:
-        "https://th-thumbnailer.cdn-si-edu.com/O969n-3CvCTievCSwQa-rYBo2Fo=/1000x750/filters:no_upscale():focal(800x602:801x603)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/3c/1c/3c1cf8e9-0694-438d-89ef-6ea678a8239e/sports-psychology-1600x1200_web.jpg",
+      image: mentalImage,
       content: `The difference between good players and great players...
 
 Develop a pre-game routine that helps you get into the zone...
@@ -79,8 +83,7 @@ Build resilience by viewing failures as learning opportunities.`,
       category: "Skills",
       excerpt:
         "The three-point line has changed basketball forever.",
-      image:
-        "https://on3static.com/uploads/dev/assets/cms/2025/10/04193551/130A0140-luka-bogavic.jpg",
+      image: pitch,
       content: `The modern game demands that all players can shoot...
 
 Start with proper footwork and mechanics...
@@ -95,8 +98,7 @@ Practice with purpose and track your shooting percentages.`,
       category: "Team",
       excerpt:
         "Individual talent wins games, but team chemistry wins championships.",
-      image:
-        "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=800&q=80",
+      image: teamImage,
       content: `The most successful basketball teams aren't always the most talented...
 
 Start by establishing clear team goals...
@@ -183,7 +185,7 @@ Communication is fundamental in building trust.`,
               <h2 className="text-xl font-bold">
                 {selectedArticle.title}
               </h2>
-              <button onClick={() => setSelectedArticle(null)}>
+              <button onClick={() => setSelectedArticle(null)} className="cursor-pointer">
                 <FaTimes />
               </button>
             </div>
@@ -211,7 +213,7 @@ Communication is fundamental in building trust.`,
 
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="mt-6 w-full border py-2 rounded"
+                className="mt-6 w-full border py-2 rounded cursor-pointer"
               >
                 Close
               </button>
