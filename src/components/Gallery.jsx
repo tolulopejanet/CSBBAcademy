@@ -13,6 +13,9 @@ export default function Gallery() {
       </h2>
 
       <p className="text-center text-gray-600 mb-10">
+        At CourtSide Academy, every stat tells a story of confidence built, teams uplifted, and futures transformed. From court drills to leadership training, we’re shaping brighter pathways for young people and their communities — one program, one game, and one breakthrough moment at a time.
+      </p>
+      <p className="text-center text-gray-600 mb-10">
         Real moments from our programs, communities, and youth development initiatives.
       </p>
 

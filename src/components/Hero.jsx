@@ -1,4 +1,11 @@
 export default function Hero() {
+  const whatsappNumber = "2348189295556";
+  const joinMessage = "Hi, my name is ___. I would like to join CourtSide Academy. Can you provide more information?";
+  const partnerMessage = "Hi, my name is ___. I would like to partner with CourtSide Academy. Can you provide more information?";
+
+  const joinUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(joinMessage)}`;
+  const partnerUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(partnerMessage)}`;
+
   return (
     <section
       className="h-screen bg-cover bg-center flex items-center"
@@ -23,12 +30,22 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <button className="bg-orange-500 px-6 py-3 rounded-lg cursor-pointer">
+            <a
+              href={joinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-500 px-6 py-3 rounded-lg cursor-pointer hover:bg-orange-600 transition-colors font-semibold"
+            >
               Join Program
-            </button>
-            <button className="border px-6 py-3 rounded-lg cursor-pointer">
+            </a>
+            <a
+              href={partnerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border px-6 py-3 rounded-lg cursor-pointer hover:bg-white/10 transition-colors font-semibold"
+            >
               Partner With Us
-            </button>
+            </a>
           </div>
         </div>
       </div>

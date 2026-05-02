@@ -1,27 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import WhoWeAre from "./components/WhoWeAre";
-import Gallery from "./components/Gallery";
-import ProblemSolution from "./components/ProblemSolution";
-import Programs from "./components/Programs";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
+import GalleryPage from "./pages/GalleryPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Hero />
-        <WhoWeAre />
-      <Stats />
-    
-      <Gallery />
-      <ProblemSolution />
-      <Programs />
-      <CTA />
-      <Footer />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Router>
   );
 }
 
