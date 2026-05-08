@@ -44,7 +44,7 @@ export default function Footer() {
               <span className="font-semibold">Address:</span> 29, Oladimeji Alo O, Freedom way Lekki Phase 1, Lagos State
             </p>
             <p className="text-gray-300 text-sm mb-2">
-              <span className="font-semibold">Email:</span> courtsideacademy1@gmail.com
+              <span className="font-semibold">Email:</span> info@courtsideacademy.ng
             </p>
             <p className="text-gray-300 text-sm mb-2">
               <span className="font-semibold">Phone:</span> +234 818 929 5556
@@ -62,7 +62,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="mailto:courtsideacademy1@gmail.com"
+                href="mailto:info@courtsideacademy.ng"
                 className="bg-gray-800 text-white p-3 rounded-full hover:bg-orange-500 transition-colors"
                 title="Email us"
               >

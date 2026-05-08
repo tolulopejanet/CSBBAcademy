@@ -70,7 +70,7 @@ Sent from CourtSide Academy Contact Page`;
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
-                  <p className="text-gray-600">29, Oladimeji Alo O, Freedom way Lekki Phase 1, Lagos State</p>
+                  <p className="text-gray-600">29, Oladimeji Alo O, <br />Freedom way Lekki Phase 1, <br/> Lagos State.</p>
                 </div>
               </div>
 
@@ -81,10 +81,10 @@ Sent from CourtSide Academy Contact Page`;
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                   <a
-                    href="mailto:courtsideacademy1@gmail.com"
+                    href="mailto:info@courtsideacademy.ng"
                     className="text-gray-600 hover:text-orange-500 transition-colors"
                   >
-                    courtsideacademy1@gmail.com
+                    info@courtsideacademy.ng
                   </a>
                 </div>
               </div>
@@ -122,7 +122,7 @@ Sent from CourtSide Academy Contact Page`;
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 <a
-                  href="mailto:courtsideacademy1@gmail.com"
+                  href="mailto:info@courtsideacademy.ng"
                   className="bg-gray-800 text-white p-3 rounded-full hover:bg-orange-500 transition-colors"
                   title="Email us"
                 >
