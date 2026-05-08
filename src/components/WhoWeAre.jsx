@@ -55,7 +55,7 @@ export default function WhoWeAre() {
             transform ambition into opportunity."
           </p>
           <div className="border-t border-slate-200 pt-6">
-            <p className="text-lg font-semibold text-slate-900">Bimbo</p>
+            <p className="text-lg font-semibold text-slate-900">Courtside Academy</p>
             <p className="text-sm text-gray-500">Founder & Executive Director</p>
           </div>
         </div>

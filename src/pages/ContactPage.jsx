@@ -35,7 +35,7 @@ ${formData.message}
 ---
 Sent from CourtSide Academy Contact Page`;
 
-    const whatsappUrl = `https://wa.me/2348189295556?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/2348100996930?text=${encodeURIComponent(whatsappMessage)}`;
     window.location.href = whatsappUrl;
   };
   return (
@@ -70,7 +70,7 @@ Sent from CourtSide Academy Contact Page`;
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
-                  <p className="text-gray-600">23, Admiralty Way, Lekki, Phase One, Lagos</p>
+                  <p className="text-gray-600">29, Oladimeji Alo O, Freedom way Lekki Phase 1, Lagos State</p>
                 </div>
               </div>
 
@@ -106,6 +106,12 @@ Sent from CourtSide Academy Contact Page`;
                     className="text-gray-600 hover:text-orange-500 transition-colors block"
                   >
                     +234 911 444 8021
+                  </a>
+                  <a
+                    href="tel:+2348100996930"
+                    className="text-gray-600 hover:text-orange-500 transition-colors block"
+                  >
+                    +234 810 099 6930
                   </a>
                 </div>
               </div>

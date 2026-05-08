@@ -75,7 +75,7 @@ export default function Navbar() {
             );
           })}
           <a
-            href="https://wa.me/2348189295556?text=Hi%2C%20my%20name%20is%20___.%20I%20would%20like%20to%20join%20CourtSide%20Academy.%20Can%20you%20provide%20more%20information%3F"
+            href="https://wa.me/2348100996930?text=Hi%2C%20my%20name%20is%20___.%20I%20would%20like%20to%20join%20CourtSide%20Academy.%20Can%20you%20provide%20more%20information%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-orange-500 px-5 py-2 rounded-lg hover:bg-orange-600 transition-colors"
@@ -117,7 +117,7 @@ export default function Navbar() {
             );
           })}
           <a
-            href="https://wa.me/2348189295556?text=Hi%2C%20my%20name%20is%20___.%20I%20would%20like%20to%20join%20CourtSide%20Academy.%20Can%20you%20provide%20more%20information%3F"
+            href="https://wa.me/2348100996930?text=Hi%2C%20my%20name%20is%20___.%20I%20would%20like%20to%20join%20CourtSide%20Academy.%20Can%20you%20provide%20more%20information%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full bg-orange-500 py-3 rounded-lg text-center hover:bg-orange-600 transition-colors"

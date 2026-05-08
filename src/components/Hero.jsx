@@ -1,5 +1,5 @@
 export default function Hero() {
-  const whatsappNumber = "2348189295556";
+  const whatsappNumber = "2348100996930";
   const joinMessage = "Hi, my name is ___. I would like to join CourtSide Academy. Can you provide more information?";
   const partnerMessage = "Hi, my name is ___. I would like to partner with CourtSide Academy. Can you provide more information?";
 

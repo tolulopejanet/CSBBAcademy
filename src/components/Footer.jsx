@@ -41,7 +41,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <p className="text-gray-300 text-sm mb-2">
-              <span className="font-semibold">Address:</span> 23, Admiralty Way, Lekki, Phase One, Lagos
+              <span className="font-semibold">Address:</span> 29, Oladimeji Alo O, Freedom way Lekki Phase 1, Lagos State
             </p>
             <p className="text-gray-300 text-sm mb-2">
               <span className="font-semibold">Email:</span> courtsideacademy1@gmail.com
@@ -49,8 +49,11 @@ export default function Footer() {
             <p className="text-gray-300 text-sm mb-2">
               <span className="font-semibold">Phone:</span> +234 818 929 5556
             </p>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm mb-2">
               <span className="font-semibold">Phone:</span> +234 911 444 8021
+            </p>
+             <p className="text-gray-300 text-sm">
+              <span className="font-semibold">Phone:</span> +234 810 099 6930
             </p>
           </div>
 
