@@ -41,7 +41,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <p className="text-gray-300 text-sm mb-2">
-             <span className="font-semibold">29, Oladimeji Alo O, <br/>Freedom way Lekki Phase 1, <br/>Lagos State.</span>
+             <span className="font-semibold">29, Oladimeji Alo Rd, <br/>Freedom way Lekki Phase 1, <br/>Lagos State.</span>
             </p>
             <p className="text-gray-300 text-sm mb-2">
               <span className="font-semibold">Email:</span> info@courtsideacademy.ng
