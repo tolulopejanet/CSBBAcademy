@@ -49,9 +49,6 @@ export default function Footer() {
             <p className="text-gray-300 text-sm mb-2">
               <span className="font-semibold">Phone:</span> +234 818 929 5556
             </p>
-            <p className="text-gray-300 text-sm mb-2">
-              <span className="font-semibold">Phone:</span> +234 911 444 8021
-            </p>
              <p className="text-gray-300 text-sm">
               <span className="font-semibold">Phone:</span> +234 810 099 6930
             </p>

@@ -20,6 +20,8 @@ import registration from "../assets/registration.jpeg";
 import setup from "../assets/setup.jpeg";
 import setup2 from "../assets/setup2.jpeg";
 
+const headerImages = [banner, ball2, pitch, pitch2];
+
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -131,20 +133,34 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-black text-white pt-32 pb-16">
-        <div className="max-w-6xl mx-auto px-6">
+      <header className="relative overflow-hidden min-h-[75vh]">
+        <div className="absolute inset-0">
+          {headerImages.map((image, index) => (
+            <div
+              key={image}
+              className="slide-bg h-full w-full"
+              style={{
+                backgroundImage: `url(${image})`,
+                animationDelay: `${index * 6}s`,
+              }}
+            />
+          ))}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+
+        <div className="absolute inset-x-0 bottom-0 max-w-6xl mx-auto px-6 pb-28">
           <Link
             to="/"
-            className="flex items-center gap-2 text-gray-400 hover:text-orange-500 mb-4 w-fit transition-colors"
+            className="flex items-center gap-2 text-gray-200 hover:text-orange-500 mb-4 w-fit transition-colors"
           >
             <FaArrowLeft /> Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Gallery</h1>
-          <p className="text-gray-300 text-lg md:text-xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Gallery</h1>
+          <p className="text-gray-200 text-lg md:text-xl max-w-3xl">
             Capturing moments of excellence, growth, and community impact
           </p>
         </div>
-      </div>
+      </header>
 
       {/* Gallery Grid */}
       <div className="max-w-6xl mx-auto px-6 py-16">

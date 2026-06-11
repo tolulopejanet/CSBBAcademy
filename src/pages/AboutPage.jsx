@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import WhoWeAre from "../components/WhoWeAre";
+import InstructorProfiles from "../components/InstructorProfiles";
 import Footer from "../components/Footer";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -24,6 +25,9 @@ export default function AboutPage() {
 
       {/* About Content */}
       <WhoWeAre />
+
+      {/* Instructor Profiles */}
+      <InstructorProfiles />
 
       <Footer />
     </div>

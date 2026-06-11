@@ -102,12 +102,6 @@ Sent from CourtSide Academy Contact Page`;
                     +234 818 929 5556
                   </a>
                   <a
-                    href="tel:+2349114448021"
-                    className="text-gray-600 hover:text-orange-500 transition-colors block"
-                  >
-                    +234 911 444 8021
-                  </a>
-                  <a
                     href="tel:+2348100996930"
                     className="text-gray-600 hover:text-orange-500 transition-colors block"
                   >
