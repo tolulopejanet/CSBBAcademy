@@ -149,7 +149,7 @@ export default function StorePage() {
                 rel="noopener noreferrer"
                 className="inline-block w-full rounded-full bg-black px-5 py-3 text-center text-white font-semibold hover:bg-slate-800 transition"
               >
-                Chat with sales
+                Chat with us
               </a>
             </div>
           </aside>
