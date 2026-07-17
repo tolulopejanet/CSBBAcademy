@@ -1,36 +1,13 @@
 import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import coachAlicho2Image from "../assets/NewImgs/Coach Alicho 2.png";
+import coachMonday2Image from "../assets/NewImgs/Coach Monday 2.png";
 
 const instructors = [
   {
-    id: 1,
-    name: "Coach Seun Adeyemi",
-    initials: "SA",
-    role: "Head Coach",
-    specialty: "Basketball Strategy & Fundamentals",
-    bio: "15+ years of coaching experience with multiple championship titles.",
-    social: {
-      twitter: "https://twitter.com",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com",
-    },
-  },
-  {
-    id: 2,
-    name: "Coach Tunde Olaitan",
-    initials: "TO",
-    role: "Skills Trainer",
-    specialty: "Ball Handling & Shooting",
-    bio: "Former professional player with expertise in developing young talents.",
-    social: {
-      twitter: "https://twitter.com",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com",
-    },
-  },
-  {
     id: 3,
-    name: "Coach Folake Ibitoye",
+    name: "Coach Christian Alicho Chigozie",
     initials: "FI",
+    image: coachAlicho2Image,
     role: "Fitness Coach",
     specialty: "Conditioning & Strength Training",
     bio: "Certified fitness trainer focused on athletic performance enhancement.",
@@ -42,8 +19,9 @@ const instructors = [
   },
   {
     id: 4,
-    name: "Coach Emeka Nwosu",
+    name: "Coach Uujaide Monday Aluede",
     initials: "EN",
+    image: coachMonday2Image,
     role: "Assistant Coach",
     specialty: "Defensive Techniques & Game Analysis",
     bio: "Specializes in player development and tactical game planning.",
@@ -73,21 +51,19 @@ export default function InstructorProfiles() {
         </div>
 
         {/* Instructors Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {instructors.map((instructor) => (
             <div
               key={instructor.id}
               className="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               {/* Avatar Container */}
-              <div className="relative bg-gradient-to-br from-orange-500 to-orange-600 h-80 flex items-center justify-center">
-                <div className="text-white text-center">
-                  <div className="w-32 h-32 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-6xl font-bold text-white">
-                      {instructor.initials}
-                    </span>
-                  </div>
-                </div>
+              <div className="relative bg-gradient-to-br from-slate-200 to-slate-300 h-80 flex items-center justify-center overflow-hidden">
+                <img
+                  src={instructor.image}
+                  alt={instructor.name}
+                  className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-300"
+                />
                 {/* Social Links Overlay */}
                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
