@@ -2,23 +2,23 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import { FaArrowLeft, FaTimes } from "react-icons/fa";
-import img1 from "../assets/img1.jpeg";
-import img2 from "../assets/img2.jpeg";
-import img3 from "../assets/img3.jpeg";
-import img4 from "../assets/img4.jpeg";
-import img5 from "../assets/img5.jpeg";
-import ball2 from "../assets/ball2.jpeg";
-import balls from "../assets/balls.jpeg";
-import pitch from "../assets/pitch.jpeg";
-import pitch2 from "../assets/pitch2.jpeg";
-import practice from "../assets/practice.jpeg";
-import practice2 from "../assets/practice2.jpeg";
-import banner from "../assets/banner.jpeg";
-import certificates from "../assets/certificates.jpeg";
-import logo2 from "../assets/logo2.jpeg";
-import registration from "../assets/registration.jpeg";
-import setup from "../assets/setup.jpeg";
-import setup2 from "../assets/setup2.jpeg";
+const img1 = "/optimized/img1.webp";
+const img2 = "/optimized/img2.webp";
+const img3 = "/optimized/img3.webp";
+const img4 = "/optimized/img4.webp";
+const img5 = "/optimized/img5.webp";
+const ball2 = "/optimized/ball2.webp";
+const balls = "/optimized/balls.webp";
+const pitch = "/optimized/pitch.webp";
+const pitch2 = "/optimized/pitch2.webp";
+const practice = "/optimized/practice.webp";
+const practice2 = "/optimized/practice2.webp";
+const banner = "/optimized/banner.webp";
+const certificates = "/optimized/certificates.webp";
+const logo2 = "/optimized/logo2.webp";
+const registration = "/optimized/registration.webp";
+const setup = "/optimized/setup.webp";
+const setup2 = "/optimized/setup2.webp";
 
 const headerImages = [banner, ball2, pitch, pitch2];
 
@@ -194,6 +194,7 @@ function GalleryCard({ item, onClick }) {
       <img
         src={item.image}
         alt={item.title}
+        loading="lazy"
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
       />
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-end">
@@ -228,6 +229,7 @@ function Lightbox({ image, onClose }) {
         <img
           src={image.image}
           alt={image.title}
+          loading="lazy"
           className="w-full h-auto rounded-lg max-h-[80vh] object-contain"
         />
 

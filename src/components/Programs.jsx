@@ -14,11 +14,11 @@ export default function Programs() {
   ];
 
   const impact = [
-    "Empowered Individuals",
-    "Stronger Communities",
-    "Reduced Crime Risk",
-    "Post-Conflict Recovery",
-    "Sustainable Development",
+    "Skill Development",
+    "Basketball IQ",
+    "Confidence & Discipline",
+    "Teamwork & Leadership",
+    "Long-Term Athletic Growth",
   ];
 
   return (

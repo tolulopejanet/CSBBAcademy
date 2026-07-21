@@ -1,7 +1,7 @@
-import img1 from "../assets/img1.jpeg";
-import img2 from "../assets/img2.jpeg";
-import img3 from "../assets/img3.jpeg";
-import img4 from "../assets/img4.jpeg";
+const img1 = "/optimized/img1.webp";
+const img2 = "/optimized/img2.webp";
+const img3 = "/optimized/img3.webp";
+const img4 = "/optimized/img4.webp";
 
 export default function Gallery() {
   const images = [img1, img2, img3, img4];
@@ -28,6 +28,7 @@ export default function Gallery() {
             <img
               src={img}
               alt="basketball impact"
+              loading="lazy"
               className="w-full h-64 object-cover hover:scale-110 transition duration-300"
             />
           </div>

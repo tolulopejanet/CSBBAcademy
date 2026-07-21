@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+const logo = "/optimized/logo.webp";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -47,6 +47,7 @@ export default function Navbar() {
             <img
               src={logo}
               alt="CourtSide logo"
+              loading="eager"
               className="h-12 w-auto md:h-16"
             />
           </div>

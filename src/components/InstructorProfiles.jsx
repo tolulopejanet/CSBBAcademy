@@ -1,6 +1,6 @@
-import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import coachAlicho2Image from "../assets/NewImgs/Coach Alicho 2.png";
-import coachMonday2Image from "../assets/NewImgs/Coach Monday 2.png";
+import { FaEnvelope } from "react-icons/fa";
+const coachAlicho2Image = "/optimized/Coach Alicho 2.webp";
+const coachMonday2Image = "/optimized/Coach Monday 2.webp";
 
 const instructors = [
   {
@@ -10,11 +10,11 @@ const instructors = [
     image: coachAlicho2Image,
     role: "Fitness Coach",
     specialty: "Conditioning & Strength Training",
-    bio: "Certified fitness trainer focused on athletic performance enhancement.",
+    bio: "Coach Christian brings a performance-first mindset to every session, combining strength work, mobility, and basketball-specific conditioning to help athletes train with purpose and recover well.",
+    approach: "He focuses on building durable bodies, faster movement, and better habits that carry into games and daily life.",
+    highlights: ["Speed and agility development", "Strength and injury prevention", "Athletic recovery routines"],
     social: {
-      twitter: "https://twitter.com",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com",
+      email: "mailto:alicho@courtsideacademy.ng",
     },
   },
   {
@@ -24,11 +24,11 @@ const instructors = [
     image: coachMonday2Image,
     role: "Assistant Coach",
     specialty: "Defensive Techniques & Game Analysis",
-    bio: "Specializes in player development and tactical game planning.",
+    bio: "Coach Monday is known for his sharp eye for detail, helping players sharpen footwork, reading the game, and making smarter decisions under pressure.",
+    approach: "He blends tactical awareness with practical drills so young athletes grow into confident, disciplined basketball players.",
+    highlights: ["Defensive footwork and positioning", "Game IQ and decision-making", "Team communication and leadership"],
     social: {
-      twitter: "https://twitter.com",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com",
+      email: "mailto:monday@courtsideacademy.ng",
     },
   },
 ];
@@ -62,36 +62,16 @@ export default function InstructorProfiles() {
                 <img
                   src={instructor.image}
                   alt={instructor.name}
+                  loading="lazy"
                   className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-300"
                 />
-                {/* Social Links Overlay */}
-                <div className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
-                    href={instructor.social.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={instructor.social.email}
                     className="bg-white text-orange-500 p-3 rounded-full hover:bg-orange-500 hover:text-white transition-colors"
-                    title="Twitter"
+                    title="Email"
                   >
-                    <FaTwitter />
-                  </a>
-                  <a
-                    href={instructor.social.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-orange-500 p-3 rounded-full hover:bg-orange-500 hover:text-white transition-colors"
-                    title="Instagram"
-                  >
-                    <FaInstagram />
-                  </a>
-                  <a
-                    href={instructor.social.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-orange-500 p-3 rounded-full hover:bg-orange-500 hover:text-white transition-colors"
-                    title="LinkedIn"
-                  >
-                    <FaLinkedin />
+                    <FaEnvelope />
                   </a>
                 </div>
               </div>
@@ -107,9 +87,20 @@ export default function InstructorProfiles() {
                 <p className="text-sm text-slate-600 font-medium mb-3">
                   {instructor.specialty}
                 </p>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed mb-4">
                   {instructor.bio}
                 </p>
+                <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                  {instructor.approach}
+                </p>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  {instructor.highlights.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1 h-2.5 w-2.5 rounded-full bg-orange-500" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

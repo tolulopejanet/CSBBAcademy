@@ -99,13 +99,13 @@ Sent from CourtSide Academy Contact Page`;
                     href="tel:+2348189295556"
                     className="text-gray-600 hover:text-orange-500 transition-colors block"
                   >
-                    +234 818 929 5556
+                    +234 810 099 6930
                   </a>
                   <a
                     href="tel:+2348100996930"
                     className="text-gray-600 hover:text-orange-500 transition-colors block"
                   >
-                    +234 810 099 6930
+                    +234 818 929 5556
                   </a>
                 </div>
               </div>

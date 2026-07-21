@@ -47,10 +47,10 @@ export default function Footer() {
               <span className="font-semibold">Email:</span> info@courtsideacademy.ng
             </p>
             <p className="text-gray-300 text-sm mb-2">
-              <span className="font-semibold">Phone:</span> +234 818 929 5556
+              <span className="font-semibold">Phone:</span> +234 810 099 6930
             </p>
              <p className="text-gray-300 text-sm">
-              <span className="font-semibold">Phone:</span> +234 810 099 6930
+              <span className="font-semibold">Phone:</span> +234 818 929 5556 
             </p>
           </div>
 

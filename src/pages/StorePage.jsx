@@ -1,39 +1,102 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FaArrowLeft, FaBasketballBall, FaCartPlus, FaShieldAlt, FaTruck } from "react-icons/fa";
+import jersey44Image from "../assets/NewImgs/jersey44.webp";
+import jersey2Image from "../assets/NewImgs/jersey2.webp";
+import jersey4Image from "../assets/NewImgs/jersey4.webp";
+import jersey22Image from "../assets/NewImgs/Jersey22.webp";
 
 // Basketball Imports
-import ball1Image from "../assets/NewImgs/Ball1.jpeg";
-import ball2Image from "../assets/NewImgs/Ball2.jpeg";
-import ball3Image from "../assets/NewImgs/Ball3.jpeg";
-import ball4Image from "../assets/NewImgs/Ball4.jpeg";
-import ball5Image from "../assets/NewImgs/Ball5.jpeg";
+const ball1Image = "/optimized/Ball1.webp";
+const ball2Image = "/optimized/Ball2.webp";
+const ball3Image = "/optimized/Ball3.webp";
+const ball4Image = "/optimized/Ball4.webp";
+const ball5Image = "/optimized/Ball5.webp";
 
 // Basketball Rim Imports
-import rimImage from "../assets/NewImgs/BasketballRim.png";
-import rim2Image from "../assets/NewImgs/BasketballRim2.png";
+const rimImage = "/optimized/BasketballRim.webp";
+const rim2Image = "/optimized/BasketballRim2.webp";
 
 // Shoes/Snickers Imports
-import snickers1Image from "../assets/NewImgs/Snickers.png";
-import snickers2Image from "../assets/NewImgs/Snickers2.png";
-import snickers3Image from "../assets/NewImgs/Snickers3.png";
-import snickers4Image from "../assets/NewImgs/Snickers4.png";
-import snickers5Image from "../assets/NewImgs/Snickers5.png";
-import snickers6Image from "../assets/NewImgs/Snickers6.png";
-import snickers7Image from "../assets/NewImgs/Snickers7.png";
-import snickers8Image from "../assets/NewImgs/Snickers8.png";
-import snickers9Image from "../assets/NewImgs/Snickers9.png";
-import snickers10Image from "../assets/NewImgs/Snickers10.png";
-import snickers11Image from "../assets/NewImgs/Snickers11.png";
-import snickers12Image from "../assets/NewImgs/Snickers12.png";
+const snickers1Image = "/optimized/Snickers.webp";
+const snickers2Image = "/optimized/Snickers2.webp";
+const snickers3Image = "/optimized/Snickers3.webp";
+const snickers4Image = "/optimized/Snickers4.webp";
+const snickers5Image = "/optimized/Snickers5.webp";
+const snickers6Image = "/optimized/Snickers6.webp";
+const snickers7Image = "/optimized/Snickers7.webp";
+const snickers8Image = "/optimized/Snickers8.webp";
+const snickers9Image = "/optimized/Snickers9.webp";
+const snickers10Image = "/optimized/Snickers10.webp";
+const snickers11Image = "/optimized/Snickers11.webp";
+const snickers12Image = "/optimized/Snickers12.webp";
 
 // Socks Imports
-import sock1Image from "../assets/NewImgs/sock1.png";
-import sock2Image from "../assets/NewImgs/sock2.png";
+const sock1Image = "/optimized/sock1.webp";
+const sock2Image = "/optimized/sock2.webp";
 
 // Tops Imports
-import top1Image from "../assets/NewImgs/top1.png";
-import top2Image from "../assets/NewImgs/top2.png";
+const top1Image = "/optimized/top1.webp";
+const top2Image = "/optimized/top2.webp";
+
+// Jerseys Imports
+const jerseyImage1 = jersey44Image;
+const jerseyImage2 = jersey2Image;
+const jerseyImage3 = jersey4Image;
+const jerseyImage4 = jersey22Image;
+
+const galleryByCategory = {
+  basketballs: [ball1Image, ball2Image, ball3Image, ball4Image, ball5Image],
+  basketballrims: [rimImage, rim2Image],
+  shoes: [
+    snickers1Image,
+    snickers2Image,
+    snickers3Image,
+    snickers4Image,
+    snickers5Image,
+    snickers6Image,
+    snickers7Image,
+    snickers8Image,
+    snickers9Image,
+    snickers10Image,
+    snickers11Image,
+    snickers12Image,
+  ],
+  socks: [sock1Image, sock2Image],
+  tops: [top1Image, top2Image],
+  jerseys: [jerseyImage1, jerseyImage2, jerseyImage3, jerseyImage4],
+};
+
+const productGalleryById = {
+  "ball-1": [ball1Image, ball2Image],
+  "ball-2": [ball2Image, ball1Image],
+  "ball-3": [ball3Image, ball4Image],
+  "ball-4": [ball4Image, ball3Image],
+  "ball-5": [ball5Image, ball4Image],
+  "rim-1": [rimImage, rim2Image],
+  "rim-2": [rim2Image, rimImage],
+  "shoe-1": [snickers1Image, snickers4Image],
+  "shoe-2": [snickers2Image, snickers9Image],
+  "shoe-3": [snickers3Image, snickers6Image],
+  "shoe-4": [snickers4Image, snickers1Image],
+  "shoe-5": [snickers5Image, snickers8Image],
+  "shoe-6": [snickers6Image, snickers3Image],
+  "shoe-7": [snickers7Image, snickers11Image],
+  "shoe-8": [snickers8Image, snickers5Image],
+  "shoe-9": [snickers9Image, snickers2Image],
+  "shoe-10": [snickers10Image, snickers10Image],
+  "shoe-11": [snickers11Image, snickers7Image],
+  "shoe-12": [snickers12Image],
+  "sock-1": [sock1Image, sock2Image],
+  "sock-2": [sock2Image, sock1Image],
+  "top-1": [top1Image, top2Image],
+  "top-2": [top2Image, top1Image],
+  "jersey-1": [jerseyImage1, jerseyImage3],
+  "jersey-2": [jerseyImage2, jerseyImage4],
+  "jersey-3": [jerseyImage3, jerseyImage1],
+  "jersey-4": [jerseyImage4, jerseyImage2],
+};
 
 const products = {
   basketballs: [
@@ -106,22 +169,6 @@ const products = {
       image: snickers1Image,
     },
     {
-      id: "shoe-2",
-      name: "Nike Basketball Kicks",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Advanced cushioning and stability for high-performance play.",
-      image: snickers2Image,
-    },
-    {
-      id: "shoe-3",
-      name: "Nike Kyrie’s",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Premium basketball shoes with enhanced ankle support.",
-      image: snickers3Image,
-    },
-    {
       id: "shoe-4",
       name: "Nike Greek Freak Immortality",
       price: "₦82,000",
@@ -130,36 +177,12 @@ const products = {
       image: snickers4Image,
     },
     {
-      id: "shoe-5",
-      name: "Adidas Spider Michell",
+      id: "shoe-2",
+      name: "Nike Basketball Kicks",
       price: "₦80,000",
       category: "Shoes",
-      description: "Professional-grade basketball shoes for competitive play.",
-      image: snickers5Image,
-    },
-    {
-      id: "shoe-6",
-      name: "Nike Kyrie’s",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Durable training shoes designed for intensive workouts.",
-      image: snickers6Image,
-    },
-    {
-      id: "shoe-7",
-      name: "Nike GT Cut",
-      price: "₦82,000",
-      category: "Shoes",
-      description: "Engineered for precision and control on the court.",
-      image: snickers7Image,
-    },
-    {
-      id: "shoe-8",
-      name: "Adidas Spider Michell",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Designed for professional athletes and competitive players.",
-      image: snickers8Image,
+      description: "Advanced cushioning and stability for high-performance play.",
+      image: snickers2Image,
     },
     {
       id: "shoe-9",
@@ -176,6 +199,46 @@ const products = {
       category: "Shoes",
       description: "Premium performance shoes for championship-level play.",
       image: snickers10Image,
+    },
+    {
+      id: "shoe-3",
+      name: "Nike Kyrie’s",
+      price: "₦80,000",
+      category: "Shoes",
+      description: "Premium basketball shoes with enhanced ankle support.",
+      image: snickers3Image,
+    },
+    {
+      id: "shoe-6",
+      name: "Nike Kyrie’s",
+      price: "₦80,000",
+      category: "Shoes",
+      description: "Durable training shoes designed for intensive workouts.",
+      image: snickers6Image,
+    },
+    {
+      id: "shoe-5",
+      name: "Adidas Spider Michell",
+      price: "₦80,000",
+      category: "Shoes",
+      description: "Professional-grade basketball shoes for competitive play.",
+      image: snickers5Image,
+    },
+    {
+      id: "shoe-8",
+      name: "Adidas Spider Michell",
+      price: "₦80,000",
+      category: "Shoes",
+      description: "Designed for professional athletes and competitive players.",
+      image: snickers8Image,
+    },
+    {
+      id: "shoe-7",
+      name: "Nike GT Cut",
+      price: "₦82,000",
+      category: "Shoes",
+      description: "Engineered for precision and control on the court.",
+      image: snickers7Image,
     },
     {
       id: "shoe-11",
@@ -215,8 +278,8 @@ const products = {
   tops: [
     {
       id: "top-1",
-      name: "CourtSide Performance Jersey",
-      price: "₦90,000",
+      name: "Academy Branded T-shirt",
+      price: "₦20,000",
       category: "Tops",
       description: "Breathable performance jersey with custom CourtSide branding.",
       image: top1Image,
@@ -230,6 +293,40 @@ const products = {
       image: top2Image,
     },
   ],
+  jerseys: [
+    {
+      id: "jersey-1",
+      name: "CourtSide Academy Jersey 44",
+      price: "₦90,000",
+      category: "Jerseys",
+      description: "Premium match jersey with bold academy branding and breathable fabric.",
+      image: jerseyImage1,
+    },
+    {
+      id: "jersey-2",
+      name: "CourtSide Academy Jersey 22",
+      price: "₦90,000",
+      category: "Jerseys",
+      description: "Performance-ready jersey designed for comfort, movement, and team pride.",
+      image: jerseyImage2,
+    },
+    {
+      id: "jersey-3",
+      name: "CourtSide Academy Jersey 4",
+      price: "₦90,000",
+      category: "Jerseys",
+      description: "Modern academy-inspired jersey for training sessions and match day.",
+      image: jerseyImage3,
+    },
+    {
+      id: "jersey-4",
+      name: "CourtSide Academy Jersey 22",
+      price: "₦90,000",
+      category: "Jerseys",
+      description: "Stylish and durable jersey with a clean academy look.",
+      image: jerseyImage4,
+    },
+  ],
 };
 
 function createWhatsAppLink(productName) {
@@ -238,41 +335,85 @@ function createWhatsAppLink(productName) {
 }
 
 function ProductSection({ title, items }) {
+  const [activeImageIndex, setActiveImageIndex] = useState({});
+
+  const selectImage = (productId, index) => {
+    setActiveImageIndex((currentIndexes) => ({ ...currentIndexes, [productId]: index }));
+  };
+
   return (
     <div className="mb-16">
       <h3 className="text-2xl font-bold text-slate-900 mb-6">{title}</h3>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {items.map((product) => (
-          <article key={product.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-            <div className="h-56 overflow-hidden bg-slate-100">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="h-full w-full object-cover object-center transition-transform duration-500 hover:scale-105"
-              />
-            </div>
-            <div className="p-6">
-              <div className="flex items-center justify-between gap-4 mb-4">
-                <div>
-                  <h4 className="text-lg font-semibold text-slate-900">{product.name}</h4>
-                  <p className="text-sm text-slate-500 mt-1">{product.price}</p>
-                </div>
-                <div className="rounded-2xl bg-orange-500 p-3 text-white">
-                  <FaCartPlus />
-                </div>
+        {items.map((product) => {
+          const categoryKey = product.category.toLowerCase().replace(/\s+/g, "").replace(/&/g, "");
+          const galleryImages = productGalleryById[product.id]
+            ? productGalleryById[product.id]
+            : (galleryByCategory[categoryKey] ?? [product.image]);
+          const currentImageIndex = activeImageIndex[product.id] ?? 0;
+          const currentImage = galleryImages[currentImageIndex] ?? product.image;
+
+          return (
+            <article key={product.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <div className="group relative h-56 overflow-hidden bg-slate-100">
+                <img
+                  src={currentImage}
+                  alt={product.name}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                />
+                {galleryImages.length > 1 && (
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-end bg-gradient-to-t from-slate-950/80 to-transparent px-4 py-3 text-sm text-white">
+                    <span className="rounded-full bg-white/15 px-2.5 py-1 text-xs font-medium backdrop-blur-sm">
+                      {currentImageIndex + 1}/{galleryImages.length}
+                    </span>
+                  </div>
+                )}
               </div>
-              <p className="text-slate-600 leading-7 mb-6 text-sm">{product.description}</p>
-              <a
-                href={createWhatsAppLink(product.name)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-orange-500 px-5 py-3 text-white font-semibold hover:bg-orange-600 transition w-full text-center"
-              >
-                Order on WhatsApp
-              </a>
-            </div>
-          </article>
-        ))}
+
+              {galleryImages.length > 1 && (
+                <div className="border-b border-slate-100 bg-slate-50 px-4 py-3">
+                  <div className="flex gap-2 overflow-x-auto pb-1">
+                    {galleryImages.map((image, index) => (
+                      <button
+                        key={`${product.id}-${index}`}
+                        type="button"
+                        onClick={() => selectImage(product.id, index)}
+                        className={`h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl border-2 ${
+                          currentImageIndex === index ? "border-orange-500" : "border-slate-200"
+                        } bg-slate-100`}
+                      >
+                        <img src={image} alt={`${product.name} view ${index + 1}`} loading="lazy" className="h-full w-full object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="p-6">
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <div>
+                    <h4 className="text-lg font-semibold text-slate-900">{product.name}</h4>
+                    <p className="text-sm text-slate-500 mt-1">{product.price}</p>
+                  </div>
+                  <div className="rounded-2xl bg-orange-500 p-3 text-white">
+                    <FaCartPlus />
+                  </div>
+                </div>
+                <p className="text-slate-600 leading-7 mb-6 text-sm">{product.description}</p>
+
+                <a
+                  href={createWhatsAppLink(product.name)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-orange-500 px-5 py-3 text-white font-semibold hover:bg-orange-600 transition w-full text-center"
+                >
+                  Order on WhatsApp
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </div>
   );
@@ -315,7 +456,7 @@ export default function StorePage() {
         <ProductSection title="🥅 Basketball Rims" items={products.rims} />
         <ProductSection title="👟 Basketball Shoes" items={products.shoes} />
         <ProductSection title="🧦 Socks" items={products.socks} />
-        <ProductSection title="👕 Tops & Jerseys" items={products.tops} />
+        <ProductSection title="👕 Tops & Jerseys" items={[...products.tops, ...products.jerseys]} />
 
         <aside className="space-y-6 rounded-3xl bg-white p-8 shadow-lg border border-slate-200 mt-16">
           <div className="space-y-3">

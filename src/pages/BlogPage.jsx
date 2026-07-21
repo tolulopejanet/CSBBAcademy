@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FaArrowLeft, FaCalendar, FaUser, FaTimes } from "react-icons/fa";
-import skill2 from "../assets/skill2.jpg";
-import defenseImage from "../assets/defense.avif";
-import healthImage from "../assets/health.avif";
-import mentalImage from "../assets/mental.jpg";
-import pitch from "../assets/pitch.jpeg";
-import teamImage from "../assets/team.avif";
+const skill2 = "/optimized/skill2.webp";
+const defenseImage = "/optimized/defense.webp";
+const healthImage = "/optimized/health.webp";
+const mentalImage = "/optimized/mental.webp";
+const pitch = "/optimized/pitch.webp";
+const teamImage = "/optimized/team.webp";
 
 export default function BlogPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -143,6 +143,7 @@ Communication is fundamental in building trust.`,
               <img
                 src={article.image}
                 alt={article.title}
+                loading="lazy"
                 className="h-40 w-full object-cover"
               />
 
@@ -195,6 +196,7 @@ Communication is fundamental in building trust.`,
               <img
                 src={selectedArticle.image}
                 alt={selectedArticle.title}
+                loading="lazy"
                 className="w-full h-64 object-cover rounded mb-4"
               />
 

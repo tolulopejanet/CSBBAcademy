@@ -5,6 +5,7 @@ import ProblemSolution from "../components/ProblemSolution";
 import Programs from "../components/Programs";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import { ProgramRegistrationSection } from "../pages/FormPage";
 
 export default function Home() {
   return (
@@ -54,6 +55,7 @@ export default function Home() {
       <Gallery />
       <ProblemSolution />
       <Programs />
+      <ProgramRegistrationSection />
       <CTA />
       <Footer />
     </>

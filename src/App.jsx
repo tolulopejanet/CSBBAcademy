@@ -7,6 +7,7 @@ import BlogPage from "./pages/BlogPage";
 import GalleryPage from "./pages/GalleryPage";
 import ContactPage from "./pages/ContactPage";
 import StorePage from "./pages/StorePage";
+import FormPage from "./pages/FormPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/store" element={<StorePage />} />
+        <Route path="/form" element={<FormPage />} />
       </Routes>
     </Router>
   );
