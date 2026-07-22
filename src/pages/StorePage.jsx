@@ -97,7 +97,7 @@ const productGalleryById = {
   "rim-1": [rimImage, rim2Image],
   "rim-2": [rim3Image, rim4Image],
   "shoe-1": [snickers1Image, snickers4Image],
-  "shoe-2": [snickers2Image, snickers9Image],
+  "shoe-2": [snickers10Image, snickers2Image],
   "shoe-3": [snickers3Image, snickers6Image],
   "shoe-4": [snickers4Image, snickers1Image],
   "shoe-5": [snickers5Image, snickers8Image],
@@ -176,14 +176,6 @@ const products = {
       category: "Shoes",
       description: "Advanced cushioning and stability for high-performance play.",
       image: snickers2Image,
-    },
-    {
-      id: "shoe-10",
-      name: "Nike Basketball Kicks",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Premium performance shoes for championship-level play.",
-      image: snickers10Image,
     },
     {
       id: "shoe-6",
@@ -272,7 +264,7 @@ const products = {
     
     {
       id: "jersey-3",
-      name: "CourtSide Academy Jersey 4",
+      name: "Courtside Academy Jersey",
       price: "₦90,000",
       category: "Jerseys",
       description: "Modern academy-inspired jersey for training sessions and match day.",
@@ -280,7 +272,7 @@ const products = {
     },
     {
       id: "jersey-4",
-      name: "CourtSide Academy Jersey 22",
+      name: "Jersey",
       price: "₦90,000",
       category: "Jerseys",
       description: "Stylish and durable jersey with a clean academy look.",
