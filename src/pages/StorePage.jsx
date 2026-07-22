@@ -161,14 +161,7 @@ const products = {
     },
   ],
   shoes: [
-    {
-      id: "shoe-1",
-      name: "Nike Greek Freak Immortality",
-      price: "₦82,000",
-      category: "Shoes",
-      description: "Lightweight support with traction designed for courts and quick cuts.",
-      image: snickers1Image,
-    },
+   
     {
       id: "shoe-2",
       name: "Nike Basketball Kicks",
