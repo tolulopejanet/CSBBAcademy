@@ -6,6 +6,8 @@ import jersey44Image from "../assets/NewImgs/jersey44.webp";
 import jersey2Image from "../assets/NewImgs/jersey2.webp";
 import jersey4Image from "../assets/NewImgs/jersey4.webp";
 import jersey22Image from "../assets/NewImgs/Jersey22.webp";
+import rim5Image from "../assets/NewImgs/rim5.webp";
+import rim6Image from "../assets/NewImgs/rim6.webp";
 
 // Basketball Imports
 const ball1Image = "/optimized/Ball1.webp";
@@ -17,6 +19,8 @@ const ball5Image = "/optimized/Ball5.webp";
 // Basketball Rim Imports
 const rimImage = "/optimized/BasketballRim.webp";
 const rim2Image = "/optimized/BasketballRim2.webp";
+const rim3Image = rim5Image;
+const rim4Image = rim6Image;
 
 // Shoes/Snickers Imports
 const snickers1Image = "/optimized/Snickers.webp";
@@ -35,6 +39,20 @@ const snickers12Image = "/optimized/Snickers12.webp";
 // Socks Imports
 const sock1Image = "/optimized/sock1.webp";
 const sock2Image = "/optimized/sock2.webp";
+
+// Shorts Imports
+const short1Image = "/optimized/short1.webp";
+const short2Image = "/optimized/short2.webp";
+const short3Image = "/optimized/short3.webp";
+const short4Image = "/optimized/short4.webp";
+const short5Image = "/optimized/short5.webp";
+const short6Image = "/optimized/short6.webp";
+
+// Elbow Guard Imports
+const elbowGuard1Image = "/optimized/elbowguard1.webp";
+const elbowGuard2Image = "/optimized/elbowguard2.webp";
+const elbowGuard3Image = "/optimized/elbowguard3.webp";
+const elbowGuard4Image = "/optimized/elbowguard4.webp";
 
 // Tops Imports
 const top1Image = "/optimized/top1.webp";
@@ -64,18 +82,20 @@ const galleryByCategory = {
     snickers12Image,
   ],
   socks: [sock1Image, sock2Image],
+  shorts: [short1Image, short2Image, short3Image, short4Image, short5Image, short6Image],
+  elbowguards: [elbowGuard1Image, elbowGuard2Image, elbowGuard3Image, elbowGuard4Image],
   tops: [top1Image, top2Image],
   jerseys: [jerseyImage1, jerseyImage2, jerseyImage3, jerseyImage4],
 };
 
 const productGalleryById = {
-  "ball-1": [ball1Image, ball2Image],
-  "ball-2": [ball2Image, ball1Image],
-  "ball-3": [ball3Image, ball4Image],
-  "ball-4": [ball4Image, ball3Image],
+  
+  "ball-2": [ball2Image, ball4Image],
+  "ball-3": [ball3Image, ball1Image],
+  
   "ball-5": [ball5Image, ball4Image],
   "rim-1": [rimImage, rim2Image],
-  "rim-2": [rim2Image, rimImage],
+  "rim-2": [rim3Image, rim4Image],
   "shoe-1": [snickers1Image, snickers4Image],
   "shoe-2": [snickers2Image, snickers9Image],
   "shoe-3": [snickers3Image, snickers6Image],
@@ -90,6 +110,11 @@ const productGalleryById = {
   "shoe-12": [snickers12Image],
   "sock-1": [sock1Image, sock2Image],
   "sock-2": [sock2Image, sock1Image],
+  "short-1": [short1Image, short2Image, short3Image, short4Image, short5Image, short6Image],
+  "elbowguard-1": [elbowGuard1Image, elbowGuard2Image],
+  "elbowguard-2": [elbowGuard2Image, elbowGuard3Image],
+  "elbowguard-3": [elbowGuard3Image, elbowGuard4Image],
+  "elbowguard-4": [elbowGuard4Image, elbowGuard1Image],
   "top-1": [top1Image, top2Image],
   "top-2": [top2Image, top1Image],
   "jersey-1": [jerseyImage1, jerseyImage3],
@@ -101,16 +126,8 @@ const productGalleryById = {
 const products = {
   basketballs: [
     {
-      id: "ball-1",
-      name: "Professional Basketball Pro",
-      price: "₦50,000",
-      category: "Basketballs",
-      description: "Premium grip, indoor/outdoor performance, size 7 professional ball.",
-      image: ball1Image,
-    },
-    {
       id: "ball-2",
-      name: "Pro Court Basketball",
+      name: "Training Basketball",
       price: "₦50,000",
       category: "Basketballs",
       description: "Premium grip, indoor/outdoor performance, size 7 professional ball.",
@@ -118,33 +135,17 @@ const products = {
     },
     {
       id: "ball-3",
-      name: "Training Basketball",
-      price: "₦50,000",
+      name: "Pro Training Basketball",
+      price: "₦70,000",
       category: "Basketballs",
       description: "Durable training ball for practice sessions and drills.",
       image: ball3Image,
-    },
-    {
-      id: "ball-4",
-      name: "Tournament Basketball",
-      price: "₦50,000",
-      category: "Basketballs",
-      description: "Official tournament-grade basketball with premium quality.",
-      image: ball4Image,
-    },
-    {
-      id: "ball-5",
-      name: "Indoor Basketball",
-      price: "₦50,000",
-      category: "Basketballs",
-      description: "High-quality indoor performance basketball.",
-      image: ball5Image,
-    },
+    }
   ],
   rims: [
     {
       id: "rim-1",
-      name: "Basketball Rim Pro",
+      name: "Basketball Rim Standard",
       price: "₦150,000",
       category: "Basketball Rims",
       description: "Regulation basketball rim with professional-grade steel construction.",
@@ -152,8 +153,8 @@ const products = {
     },
     {
       id: "rim-2",
-      name: "Basketball Rim Standard",
-      price: "₦150,000",
+      name: "Basketball Rim Pro",
+      price: "₦200,000",
       category: "Basketball Rims",
       description: "Standard basketball rim suitable for practice and training.",
       image: rim2Image,
@@ -169,28 +170,12 @@ const products = {
       image: snickers1Image,
     },
     {
-      id: "shoe-4",
-      name: "Nike Greek Freak Immortality",
-      price: "₦82,000",
-      category: "Shoes",
-      description: "Lightweight design perfect for quick movement and agility.",
-      image: snickers4Image,
-    },
-    {
       id: "shoe-2",
       name: "Nike Basketball Kicks",
       price: "₦80,000",
       category: "Shoes",
       description: "Advanced cushioning and stability for high-performance play.",
       image: snickers2Image,
-    },
-    {
-      id: "shoe-9",
-      name: "Nike Basketball Kicks",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Maximum comfort and support for long practice sessions.",
-      image: snickers9Image,
     },
     {
       id: "shoe-10",
@@ -201,14 +186,6 @@ const products = {
       image: snickers10Image,
     },
     {
-      id: "shoe-3",
-      name: "Nike Kyrie’s",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Premium basketball shoes with enhanced ankle support.",
-      image: snickers3Image,
-    },
-    {
       id: "shoe-6",
       name: "Nike Kyrie’s",
       price: "₦80,000",
@@ -217,28 +194,12 @@ const products = {
       image: snickers6Image,
     },
     {
-      id: "shoe-5",
-      name: "Adidas Spider Michell",
-      price: "₦80,000",
-      category: "Shoes",
-      description: "Professional-grade basketball shoes for competitive play.",
-      image: snickers5Image,
-    },
-    {
       id: "shoe-8",
       name: "Adidas Spider Michell",
       price: "₦80,000",
       category: "Shoes",
       description: "Designed for professional athletes and competitive players.",
       image: snickers8Image,
-    },
-    {
-      id: "shoe-7",
-      name: "Nike GT Cut",
-      price: "₦82,000",
-      category: "Shoes",
-      description: "Engineered for precision and control on the court.",
-      image: snickers7Image,
     },
     {
       id: "shoe-11",
@@ -259,20 +220,41 @@ const products = {
   ],
   socks: [
     {
-      id: "sock-1",
-      name: "Performance Basketball Socks",
-      price: "₦10,000",
-      category: "Socks",
-      description: "High-performance socks with moisture-wicking technology.",
-      image: sock1Image,
-    },
-    {
       id: "sock-2",
       name: "Cushioned Court Socks",
       price: "₦10,000",
       category: "Socks",
       description: "Extra cushioning for comfort during long games and practice.",
       image: sock2Image,
+    },
+  ],
+  shorts: [
+    {
+      id: "short-1",
+      name: "Training Shorts",
+      price: "₦18,000",
+      category: "Shorts",
+      description: "Lightweight and breathable shorts for practice and game-day comfort.",
+      image: short1Image,
+    },
+  ],
+  elbowguards: [
+    {
+      id: "elbowguard-1",
+      name: "Protective Elbow Guard",
+      price: "₦10,000",
+      category: "Elbow Guards",
+      description: "Comfortable protection for training, scrimmages, and high-impact play.",
+      image: elbowGuard1Image,
+    },
+    
+    {
+      id: "elbowguard-3",
+      name: "Protective Elbow Guard",
+      price: "₦10,000",
+      category: "Elbow Guards",
+      description: "A lighter option that still offers solid protection and comfort.",
+      image: elbowGuard3Image,
     },
   ],
   tops: [
@@ -284,32 +266,10 @@ const products = {
       description: "Breathable performance jersey with custom CourtSide branding.",
       image: top1Image,
     },
-    {
-      id: "top-2",
-      name: "Training Top",
-      price: "₦90,000",
-      category: "Tops",
-      description: "Comfortable training top perfect for practice sessions.",
-      image: top2Image,
-    },
+    
   ],
   jerseys: [
-    {
-      id: "jersey-1",
-      name: "CourtSide Academy Jersey 44",
-      price: "₦90,000",
-      category: "Jerseys",
-      description: "Premium match jersey with bold academy branding and breathable fabric.",
-      image: jerseyImage1,
-    },
-    {
-      id: "jersey-2",
-      name: "CourtSide Academy Jersey 22",
-      price: "₦90,000",
-      category: "Jerseys",
-      description: "Performance-ready jersey designed for comfort, movement, and team pride.",
-      image: jerseyImage2,
-    },
+    
     {
       id: "jersey-3",
       name: "CourtSide Academy Jersey 4",
@@ -336,6 +296,7 @@ function createWhatsAppLink(productName) {
 
 function ProductSection({ title, items }) {
   const [activeImageIndex, setActiveImageIndex] = useState({});
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const selectImage = (productId, index) => {
     setActiveImageIndex((currentIndexes) => ({ ...currentIndexes, [productId]: index }));
@@ -356,12 +317,19 @@ function ProductSection({ title, items }) {
           return (
             <article key={product.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
               <div className="group relative h-56 overflow-hidden bg-slate-100">
-                <img
-                  src={currentImage}
-                  alt={product.name}
-                  loading="lazy"
-                  className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                />
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage({ src: currentImage, alt: product.name })}
+                  className="h-full w-full"
+                  aria-label={`View full image for ${product.name}`}
+                >
+                  <img
+                    src={currentImage}
+                    alt={product.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                </button>
                 {galleryImages.length > 1 && (
                   <div className="absolute inset-x-0 bottom-0 flex items-center justify-end bg-gradient-to-t from-slate-950/80 to-transparent px-4 py-3 text-sm text-white">
                     <span className="rounded-full bg-white/15 px-2.5 py-1 text-xs font-medium backdrop-blur-sm">
@@ -415,6 +383,25 @@ function ProductSection({ title, items }) {
           );
         })}
       </div>
+
+      {selectedImage && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 px-4 py-6 backdrop-blur-sm">
+          <div className="relative w-full max-w-4xl rounded-3xl bg-white p-3 shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setSelectedImage(null)}
+              className="absolute right-3 top-3 z-10 rounded-full bg-slate-950/80 px-3 py-2 text-sm font-semibold text-white hover:bg-slate-950"
+            >
+              Close
+            </button>
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="max-h-[80vh] w-full rounded-2xl object-contain"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -456,6 +443,8 @@ export default function StorePage() {
         <ProductSection title="🥅 Basketball Rims" items={products.rims} />
         <ProductSection title="👟 Basketball Shoes" items={products.shoes} />
         <ProductSection title="🧦 Socks" items={products.socks} />
+        <ProductSection title="🩳 Shorts" items={products.shorts} />
+        <ProductSection title="🛡️ Elbow Guards" items={products.elbowguards} />
         <ProductSection title="👕 Tops & Jerseys" items={[...products.tops, ...products.jerseys]} />
 
         <aside className="space-y-6 rounded-3xl bg-white p-8 shadow-lg border border-slate-200 mt-16">
