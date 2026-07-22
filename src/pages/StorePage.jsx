@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FaArrowLeft, FaBasketballBall, FaCartPlus, FaShieldAlt, FaTruck } from "react-icons/fa";
-import jersey44Image from "../assets/NewImgs/jersey44.webp";
-import jersey2Image from "../assets/NewImgs/jersey2.webp";
-import jersey4Image from "../assets/NewImgs/jersey4.webp";
-import jersey22Image from "../assets/NewImgs/Jersey22.webp";
-import rim5Image from "../assets/NewImgs/rim5.webp";
-import rim6Image from "../assets/NewImgs/rim6.webp";
+
+const jersey44Image = "/optimized/jersey44.webp";
+const jersey2Image = "/optimized/jersey2.webp";
+const jersey4Image = "/optimized/jersey4.webp";
+const jersey22Image = "/optimized/Jersey22.webp";
+const rim5Image = "/optimized/rim5.webp";
+const rim6Image = "/optimized/rim6.webp";
 
 // Basketball Imports
 const ball1Image = "/optimized/Ball1.webp";
@@ -107,7 +108,7 @@ const productGalleryById = {
   "shoe-9": [snickers9Image, snickers2Image],
   "shoe-10": [snickers10Image, snickers10Image],
   "shoe-11": [snickers11Image, snickers7Image],
-  "shoe-12": [snickers12Image],
+  "shoe-12": [snickers12Image,snickers9Image],
   "sock-1": [sock1Image, sock2Image],
   "sock-2": [sock2Image, sock1Image],
   "short-1": [short1Image, short2Image, short3Image, short4Image, short5Image, short6Image],
