@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   const whatsappNumber = "2348100996930";
   const joinMessage = "Hi, my name is ___. I would like to join CourtSide Academy. Can you provide more information?";
@@ -30,14 +32,12 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <a
-              href={joinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/form"
               className="bg-orange-500 px-6 py-3 rounded-lg cursor-pointer hover:bg-orange-600 transition-colors font-semibold"
             >
               Join Program
-            </a>
+            </Link>
             <a
               href={partnerUrl}
               target="_blank"
